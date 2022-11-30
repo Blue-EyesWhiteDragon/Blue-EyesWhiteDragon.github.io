@@ -1,3 +1,5 @@
+const { redirect } = require("react-router");
+
 /** @type {import("tailwindcss").Config} */
 module.exports = {
     darkMode : "class",
@@ -11,6 +13,9 @@ module.exports = {
                 "wiggle": "wiggle 1s linear 0s infinite",
                 "wiggle-hold" : "wiggle 1s linear 1s infinite",
 
+                "wiggle-and-grow-once" : "wiggle-and-grow .5s linear 0s 1",
+                "dark-wiggle-and-grow-once" : "dark-wiggle-and-grow .5s linear 0s 1",
+
                 "drop-fade-in-10" : "drop-fade-in-10 1s linear 0s",
                 "drop-fade-in-10-slow" : "drop-fade-in-10 2s linear 0s",
                 "drop-fade-in-10-fast" : "drop-fade-in-10 .5s linear 0s",
@@ -21,9 +26,39 @@ module.exports = {
             },
             keyframes: {
                 wiggle: {
-                    "0%, 50%, 100%" : { transform: "rotate(0deg)" },
+                    "0%, 100%" : {  },
                     "25%": { transform: "rotate(3deg)" },
                     "75%": { transform: "rotate(-3deg)" },
+                },
+                "wiggle-and-grow" : {
+                    "0%, 50%, 100%" : {
+                        color: "#fff",
+                        transform: "rotate(0deg) scale(1)"
+                    },
+                    "25%": {
+                        transform: "rotate(3deg) scale(1)"
+                    },
+                    "50%" :{
+                        transform: "rotate(0deg) scale(1.5)"
+                    },
+                    "75%": {
+                        transform: "rotate(-3deg) scale(1)"
+                    }
+                },
+                "dark-wiggle-and-grow" : {
+                    "0%, 50%, 100%" : {
+                        color: "rgb(254 215 170)", //orange-200
+                        transform: "rotate(0deg) scale(1)"
+                    },
+                    "25%": {
+                        transform: "rotate(3deg) scale(1)"
+                    },
+                    "50%" :{
+                        transform: "rotate(0deg) scale(1.5)"
+                    },
+                    "75%": {
+                        transform: "rotate(-3deg) scale(1)"
+                    }
                 },
                 "drop-fade-in-10" : {
                     "0%" : {
