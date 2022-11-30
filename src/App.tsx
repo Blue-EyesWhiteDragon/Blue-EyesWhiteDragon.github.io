@@ -165,7 +165,7 @@ const App = () => {
                             <a href="mailto:jackloudon@live.com" target="_blank" className="motion-safe:hover:animate-wiggle-hold text-blue-400 hover:text-blue-200 dark:text-gray-400 dark:hover:text-orange-400 transition ease-in-out duration-200"><AiTwotoneMail /></a>
                             <a href="https://youtube.com/@ho_loofficial" target="_blank" className="motion-safe:hover:animate-wiggle-hold text-red-600 hover:text-red-400 dark:text-gray-400 dark:hover:text-orange-400 transition ease-in-out duration-200"><AiFillYoutube /></a>
                         </div>
-                        <div className="z-10 animate-drop-fade-in-100-fast mx-auto bg-gradient-to-b from-red-800 dark:from-orange-500 rounded-full w-80 h-80 relative overflow-hidden mt-1  0 md:h-96 md:w-96">
+                        <div className="animate-drop-fade-in-100-fast mx-auto bg-gradient-to-b from-red-800 dark:from-orange-500 rounded-full h-40 w-40 relative overflow-hidden mt-1 sm:h-80 sm:w-80 md:h-96 md:w-96">
                             <img src={portfolioPhoto} className="opacity-80 mix-blend-hard-light" />
                         </div>
                     </div>
